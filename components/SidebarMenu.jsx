@@ -7,6 +7,7 @@ import {
   LogOut,
   ShoppingBag,
   Triangle,
+  X,
 } from "react-feather";
 import Inner from "components/styles/Sidebar";
 import DashHeader from "./styles/Header";
@@ -87,7 +88,6 @@ const SidebarMenu = ({ router }) => {
     },
   ];
 
-  console.log(activeNavItem);
   const menu = (
     <>
       <Menu
@@ -118,6 +118,7 @@ const SidebarMenu = ({ router }) => {
       </div>
     </>
   );
+
   return (
     <Inner>
       {!isMobileDevice && (
@@ -164,6 +165,13 @@ const SidebarMenu = ({ router }) => {
                     </strong>
                   </a>
                 </Link>
+                <span className="mr-auto" />
+                <X
+                  size={27}
+                  strokeWidth={1}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => dispatch(setMobileDrawer(false))}
+                />
               </Header>
             </DashHeader>
             {menu}
