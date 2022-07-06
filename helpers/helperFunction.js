@@ -3,7 +3,6 @@ function activeMenuItem(url) {
   //default dashbord
   let defaultOpenKeys = [],
     defaultSelectedKeys = ["/"];
-  console.log(arr);
 
   // products
   if (arr[1] === "products") {
